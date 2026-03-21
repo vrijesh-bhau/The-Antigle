@@ -1,295 +1,165 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Antigle - Gaming Content & Resources</title>
-  <meta name="description" content="The Antigle - Gaming guides, tutorials, and resources by Mukund from Not Gaming Playz YouTube channel.">
-  
-  <!-- Fonts -->
+  <meta name="description" content="The Antigle - Your ultimate destination for gaming guides, tutorials, and resources. Created by Mukund to help gamers level up their skills.">
+  <meta name="keywords" content="gaming, minecraft, tutorials, youtube, the antigle, mukund">
+  <meta name="author" content="Mukund">
+  <meta name="theme-color" content="#0f1724">
+  <meta property="og:title" content="The Antigle - Gaming by Mukund">
+  <meta property="og:description" content="Your ultimate destination for gaming guides, tutorials, and resources.">
+  <meta property="og:type" content="website">
+  <title>The Antigle - Gaming Content &amp; Resources</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" type="image/png" href="./assets/images/website_logo.png">
 </head>
 <body>
-  <!-- ==================== NAVBAR ==================== -->
-  <nav class="navbar" id="navbar">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="navbar-container">
-      <a href="index.html" class="navbar-logo">
-        <img src="assets/images/logo.png" alt="The Antigle Logo">
+      <a href="./index.html" class="navbar-brand">
+        <img src="./assets/images/website_logo.png" alt="The Antigle Logo">
         <span>The Antigle</span>
       </a>
-      
-      <ul class="navbar-nav" id="navbar-nav">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="updates.html">Updates</a></li>
-        <li><a href="about.html">About</a></li>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-nav">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <ul class="navbar-nav" id="navbar-nav" role="menubar">
+        <li role="none"><a href="./index.html"     class="nav-link active" role="menuitem">Home</a></li>
+        <li role="none"><a href="./videos.html"    class="nav-link"        role="menuitem">Videos</a></li>
+        <li role="none"><a href="./resources.html" class="nav-link"        role="menuitem">Resources</a></li>
+        <li role="none"><a href="./updates.html"   class="nav-link"        role="menuitem">Updates</a></li>
+        <li role="none"><a href="./about.html"     class="nav-link"        role="menuitem">About</a></li>
       </ul>
-      
       <div class="navbar-actions">
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-          <!-- Icon will be inserted by JS -->
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun"  width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         </button>
-        
-        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <a href="https://youtube.com/@notgamingplayz" target="_blank" rel="noopener noreferrer" class="btn btn-youtube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          <span>Subscribe</span>
+        </a>
       </div>
     </div>
   </nav>
 
-  <!-- ==================== HERO SECTION ==================== -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-        </svg>
-        Not Gaming Playz
-      </div>
-      
-      <h1>Welcome to <span>The Antigle</span></h1>
-      <p>Your ultimate destination for gaming guides, tutorials, and resources. Created by Mukund to help gamers level up their skills.</p>
-      
-      <div class="hero-buttons">
-        <a href="https://youtube.com/@notgamingplayz" target="_blank" class="btn btn-youtube">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-          </svg>
-          Watch on YouTube
-        </a>
-        <a href="resources.html" class="btn btn-secondary">Explore Resources</a>
-      </div>
-    </div>
-  </section>
+  <main id="main-content" class="main-content">
 
-  <!-- ==================== CATEGORIES SECTION ==================== -->
-  <section class="section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Explore Categories</h2>
-        <p>Discover content tailored to your gaming needs</p>
-      </div>
-      
-      <div class="category-cards">
-        <!-- Gaming Guides -->
-        <div class="category-card animate-on-scroll">
-          <div class="category-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="6" width="20" height="12" rx="2"></rect>
-              <path d="M6 12h4"></path>
-              <path d="M8 10v4"></path>
-              <circle cx="16" cy="11" r="1"></circle>
-              <circle cx="18" cy="13" r="1"></circle>
-            </svg>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <a href="https://youtube.com/@notgamingplayz" target="_blank" rel="noopener noreferrer" class="hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            Not Gaming Playz
+          </a>
+          <h1 class="hero-title-welcome">
+            Welcome to <span class="hero-title-highlight">The Antigle</span>
+          </h1>
+          <p class="hero-tagline">
+            Your ultimate destination for gaming guides, tutorials, and resources. Created by Mukund to help gamers level up their skills.
+          </p>
+          <div class="hero-actions">
+            <a href="https://youtube.com/@notgamingplayz" target="_blank" rel="noopener noreferrer" class="btn btn-youtube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              Watch on YouTube
+            </a>
+            <a href="./resources.html" class="btn btn-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Explore Resources
+            </a>
           </div>
-          <h3>Gaming Guides</h3>
-          <p>Comprehensive guides for popular games including Minecraft, helping you master every aspect of your favorite titles.</p>
-          <a href="videos.html" class="btn btn-primary" style="padding: 0.625rem 1.25rem; font-size: 0.9rem;">View Guides</a>
-        </div>
-        
-        <!-- Smart Tools -->
-        <div class="category-card animate-on-scroll">
-          <div class="category-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-            </svg>
-          </div>
-          <h3>Smart Tools</h3>
-          <p>Handpicked tools and utilities to enhance your gaming experience, boost performance, and streamline your workflow.</p>
-          <a href="resources.html" class="btn btn-primary" style="padding: 0.625rem 1.25rem; font-size: 0.9rem;">Explore Tools</a>
-        </div>
-        
-        <!-- Resources -->
-        <div class="category-card animate-on-scroll">
-          <div class="category-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-          </div>
-          <h3>Resources</h3>
-          <p>Downloadable content, study materials, and gaming resources to help you learn and improve your skills.</p>
-          <a href="resources.html" class="btn btn-primary" style="padding: 0.625rem 1.25rem; font-size: 0.9rem;">Get Resources</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== LATEST VIDEO SECTION ==================== -->
-  <section class="section" style="background: var(--bg-secondary);">
-    <div class="container">
-      <div class="section-title">
-        <h2>Latest Video</h2>
-        <p>Check out the newest content from Not Gaming Playz</p>
+    <!-- Browse Categories -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Browse Categories</h2>
+        </div>
+        <div class="categories-grid">
+          <a href="./resources.html?category=gaming" class="category-card">
+            <div class="category-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4"/><path d="M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="19" cy="13" r="1"/></svg>
+            </div>
+            <span class="category-name">Gaming</span>
+            <span class="category-count">Mods &amp; Resources</span>
+          </a>
+          <a href="./resources.html?category=tools" class="category-card">
+            <div class="category-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <span class="category-name">Tools</span>
+            <span class="category-count">Utilities &amp; Software</span>
+          </a>
+          <a href="./resources.html?category=study" class="category-card">
+            <div class="category-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <span class="category-name">Study</span>
+            <span class="category-count">Guides &amp; Materials</span>
+          </a>
+        </div>
       </div>
-      
-      <div class="youtube-embed animate-on-scroll" style="max-width: 900px; margin: 0 auto;">
-        <iframe 
-          src="https://www.youtube.com/embed?listType=playlist&list=UU-notgamingplayz" 
-          title="Latest Video from Not Gaming Playz"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-      
-      <!-- Subscribe Section -->
-      <div class="subscribe-section animate-on-scroll">
-        <img src="assets/images/youtube-avatar.png" alt="Not Gaming Playz Avatar">
-        <h2>Subscribe to Not Gaming Playz</h2>
-        <p>Join our growing community of gamers! Get notified about new videos, tutorials, and gaming content.</p>
-        <a href="https://youtube.com/@notgamingplayz" target="_blank" class="btn btn-youtube">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
-            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-          </svg>
-          Subscribe Now
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== LATEST UPDATES SECTION ==================== -->
-  <section class="section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Latest Updates</h2>
-        <p>Stay informed about new content and announcements</p>
-      </div>
-      
-      <div class="update-grid">
-        <!-- Update 1 -->
-        <div class="update-card animate-on-scroll">
-          <div class="update-image">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="1.5">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
-          </div>
-          <div class="update-content">
-            <div class="update-date">January 28, 2026</div>
-            <h3>Website Launch</h3>
-            <p>Welcome to The Antigle! Our brand new website is now live with gaming guides, resources, and more.</p>
-            <a href="updates.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Read More</a>
-          </div>
+    <!-- Featured Video -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Video</h2>
+          <a href="./videos.html" class="section-link">View All Videos <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
         </div>
-        
-        <!-- Update 2 -->
-        <div class="update-card animate-on-scroll">
-          <div class="update-image">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.5">
-              <rect x="2" y="6" width="20" height="12" rx="2"></rect>
-              <path d="M6 12h4"></path>
-              <path d="M8 10v4"></path>
-              <circle cx="16" cy="11" r="1"></circle>
-              <circle cx="18" cy="13" r="1"></circle>
-            </svg>
-          </div>
-          <div class="update-content">
-            <div class="update-date">January 25, 2026</div>
-            <h3>New Minecraft Tutorial Series</h3>
-            <p>Starting a new series of Minecraft tutorials covering advanced building techniques and redstone mechanics.</p>
-            <a href="updates.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Read More</a>
-          </div>
-        </div>
-        
-        <!-- Update 3 -->
-        <div class="update-card animate-on-scroll">
-          <div class="update-image">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent-pink)" stroke-width="1.5">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-            </svg>
-          </div>
-          <div class="update-content">
-            <div class="update-date">January 20, 2026</div>
-            <h3>Free Resources Available</h3>
-            <p>Download our collection of gaming resources, including texture packs, mods, and helpful guides.</p>
-            <a href="updates.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Read More</a>
-          </div>
+        <div id="featured-video">
+          <div class="loading-spinner"><div class="spinner"></div></div>
         </div>
       </div>
-      
-      <div style="text-align: center; margin-top: 3rem;">
-        <a href="updates.html" class="btn btn-primary">View All Updates</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== FOOTER ==================== -->
+    <!-- Latest Updates -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Latest Updates</h2>
+          <a href="./updates.html" class="section-link">View All <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+        <div class="cards-grid" id="latest-updates">
+          <div class="loading-spinner" style="grid-column:1/-1"><div class="spinner"></div></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <!-- Brand -->
         <div class="footer-brand">
-          <img src="assets/images/logo.png" alt="The Antigle Logo">
-          <p>Your destination for gaming guides, tutorials, and resources. Created by Mukund from Not Gaming Playz.</p>
-          <div class="footer-social">
-            <a href="https://youtube.com/@notgamingplayz" target="_blank" aria-label="YouTube">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-              </svg>
-            </a>
-            <a href="mailto:jhamukund215@gmail.com" aria-label="Email">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-            </a>
+          <img src="./assets/images/youtube_avatar.png" alt="" class="footer-avatar">
+          <div class="footer-info">
+            <h3>The Antigle</h3>
+            <p>Created by Mukund</p>
           </div>
         </div>
-        
-        <!-- Quick Links -->
         <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="videos.html">Videos</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="updates.html">Updates</a></li>
-          </ul>
+          <a href="mailto:jhamukund215@gmail.com" class="footer-link">Contact</a>
+          <a href="https://youtube.com/@notgamingplayz" target="_blank" rel="noopener noreferrer" class="footer-link">YouTube</a>
         </div>
-        
-        <!-- Categories -->
-        <div class="footer-links">
-          <h4>Categories</h4>
-          <ul>
-            <li><a href="videos.html">Minecraft</a></li>
-            <li><a href="videos.html">Tutorials</a></li>
-            <li><a href="videos.html">Tips & Tricks</a></li>
-            <li><a href="resources.html">Downloads</a></li>
-          </ul>
-        </div>
-        
-        <!-- Contact -->
-        <div class="footer-links">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="mailto:jhamukund215@gmail.com">Email</a></li>
-            <li><a href="https://youtube.com/@notgamingplayz" target="_blank">YouTube</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; <span class="current-year"></span> The Antigle. Created by Mukund. All rights reserved.</p>
+        <div class="footer-copyright"><p>&copy; 2025 The Antigle. All rights reserved.</p></div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>

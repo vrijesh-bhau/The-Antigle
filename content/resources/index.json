@@ -1,0 +1,16 @@
+[
+  {
+    "id": "res-001",
+    "title": "Minecraft Starter Pack",
+    "description": "Essential mods and texture packs for new Minecraft players. Includes OptiFine, shader settings, and a basic resource pack.",
+    "category": "gaming",
+    "thumbnail": "",
+    "file": "",
+    "external_link": "",
+    "download_type": "external",
+    "youtube": "",
+    "date": "2025-01-01",
+    "tags": ["minecraft", "starter", "mods"],
+    "note": "Example entry — edit or delete this. Add your own resources below."
+  }
+]

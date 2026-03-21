@@ -1,431 +1,89 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Latest updates, news, and community posts from The Antigle by Mukund.">
+  <meta name="author" content="Mukund"><meta name="theme-color" content="#0f1724">
   <title>Updates - The Antigle</title>
-  <meta name="description" content="Stay updated with the latest news, announcements, and blog posts from The Antigle.">
-  
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" type="image/png" href="./assets/images/website_logo.png">
 </head>
 <body>
-  <!-- ==================== NAVBAR ==================== -->
-  <nav class="navbar" id="navbar">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="navbar-container">
-      <a href="index.html" class="navbar-logo">
-        <img src="assets/images/logo.png" alt="The Antigle Logo">
-        <span>The Antigle</span>
+      <a href="./index.html" class="navbar-brand">
+        <img src="./assets/images/website_logo.png" alt="The Antigle Logo"><span>The Antigle</span>
       </a>
-      
-      <ul class="navbar-nav" id="navbar-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="updates.html" class="active">Updates</a></li>
-        <li><a href="about.html">About</a></li>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-nav">
+        <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+      </button>
+      <ul class="navbar-nav" id="navbar-nav" role="menubar">
+        <li><a href="./index.html"     class="nav-link"        >Home</a></li>
+        <li><a href="./videos.html"    class="nav-link"        >Videos</a></li>
+        <li><a href="./resources.html" class="nav-link"        >Resources</a></li>
+        <li><a href="./updates.html"   class="nav-link active" >Updates</a></li>
+        <li><a href="./about.html"     class="nav-link"        >About</a></li>
       </ul>
-      
       <div class="navbar-actions">
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-          <!-- Icon will be inserted by JS -->
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun"  width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         </button>
-        
-        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <a href="https://youtube.com/@notgamingplayz" target="_blank" rel="noopener noreferrer" class="btn btn-youtube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          <span>Subscribe</span>
+        </a>
       </div>
     </div>
   </nav>
+  <main id="main-content" class="main-content">
 
-  <!-- ==================== PAGE HEADER ==================== -->
-  <header class="page-header">
-    <div class="container">
-      <h1>Updates</h1>
-      <p>Latest news, announcements, and blog posts from The Antigle</p>
-    </div>
-  </header>
-
-  <!-- ==================== UPDATES SECTION ==================== -->
-  <section class="section">
-    <div class="container">
-      <!-- Featured Update -->
-      <div class="glass-card" style="margin-bottom: 3rem; display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: center;">
-        <div style="background: var(--bg-tertiary); border-radius: var(--radius-md); aspect-ratio: 16/10; display: flex; align-items: center; justify-content: center;">
-          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="1">
-            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-          </svg>
+    <!-- Latest YouTube video at top -->
+    <section class="section" style="padding-bottom:1rem">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Latest from YouTube</h2>
+          <a href="./videos.html" class="section-link">All Videos <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
         </div>
-        <div>
-          <span style="display: inline-block; padding: 0.25rem 0.75rem; background: var(--accent-gradient); color: white; font-size: 0.75rem; font-weight: 600; border-radius: 50px; margin-bottom: 1rem;">Featured</span>
-          <div class="update-date" style="margin-bottom: 0.5rem;">January 28, 2026</div>
-          <h2 style="margin-bottom: 1rem;">The Antigle Website is Now Live!</h2>
-          <p style="margin-bottom: 1.5rem;">We're excited to announce the official launch of The Antigle website! This has been a passion project to create a central hub for all our gaming content, resources, and community. Explore our videos, download resources, and stay updated with the latest news.</p>
-          <a href="#full-post" class="btn btn-primary" onclick="showFullPost(event, 'launch')">Read Full Post</a>
+        <div id="updates-featured-video">
+          <div class="loading-spinner"><div class="spinner"></div></div>
         </div>
       </div>
-      
-      <!-- Updates Grid -->
-      <div class="update-grid">
-        <!-- Update 1 -->
-        <article class="update-card">
-          <div class="update-image" style="background: linear-gradient(135deg, var(--accent-blue)20, var(--accent-purple)20);">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="1.5">
-              <rect x="2" y="6" width="20" height="12" rx="2"></rect>
-              <path d="M6 12h4"></path>
-              <path d="M8 10v4"></path>
-              <circle cx="16" cy="11" r="1"></circle>
-              <circle cx="18" cy="13" r="1"></circle>
-            </svg>
-          </div>
-          <div class="update-content">
-            <div class="update-date">January 25, 2026</div>
-            <h3>New Minecraft Tutorial Series Announced</h3>
-            <p>Get ready for our comprehensive Minecraft tutorial series covering everything from basic survival to advanced redstone mechanics.</p>
-            <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;" onclick="showFullPost(event, 'minecraft-series')">Read More</a>
-          </div>
-        </article>
-        
-        <!-- Update 2 -->
-        <article class="update-card">
-          <div class="update-image" style="background: linear-gradient(135deg, var(--accent-purple)20, var(--accent-pink)20);">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.5">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-            </svg>
-          </div>
-          <div class="update-content">
-            <div class="update-date">January 20, 2026</div>
-            <h3>Free Resources Section Now Available</h3>
-            <p>We've added a dedicated resources section where you can download gaming tools, guides, and study materials for free.</p>
-            <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;" onclick="showFullPost(event, 'resources')">Read More</a>
-          </div>
-        </article>
-        
-        <!-- Update 3 -->
-        <article class="update-card">
-          <div class="update-image" style="background: linear-gradient(135deg, var(--accent-pink)20, var(--accent-blue)20);">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent-pink)" stroke-width="1.5">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
-          </div>
-          <div class="update-content">
-            <div class="update-date">January 15, 2026</div>
-            <h3>Community Growth Milestone</h3>
-            <p>Thank you to our amazing community! We've reached a new milestone and couldn't have done it without your support.</p>
-            <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;" onclick="showFullPost(event, 'milestone')">Read More</a>
-          </div>
-        </article>
-        
-        <!-- Update 4 -->
-        <article class="update-card">
-          <div class="update-image" style="background: linear-gradient(135deg, var(--accent-blue)20, var(--accent-purple)20);">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="1.5">
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-            </svg>
-          </div>
-          <div class="update-content">
-            <div class="update-date">January 10, 2026</div>
-            <h3>Website Features Overview</h3>
-            <p>Learn about all the features we've built into The Antigle website, including dark mode, resource downloads, and more.</p>
-            <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;" onclick="showFullPost(event, 'features')">Read More</a>
-          </div>
-        </article>
-        
-        <!-- Update 5 -->
-        <article class="update-card">
-          <div class="update-image" style="background: linear-gradient(135deg, var(--accent-purple)20, var(--accent-pink)20);">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.5">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-            </svg>
-          </div>
-          <div class="update-content">
-            <div class="update-date">January 5, 2026</div>
-            <h3>Top Gaming Tips of the Month</h3>
-            <p>We've compiled the best gaming tips and tricks from our community. Check out what other gamers are recommending!</p>
-            <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;" onclick="showFullPost(event, 'tips')">Read More</a>
-          </div>
-        </article>
-        
-        <!-- Update 6 -->
-        <article class="update-card">
-          <div class="update-image" style="background: linear-gradient(135deg, var(--accent-pink)20, var(--accent-blue)20);">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent-pink)" stroke-width="1.5">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-            </svg>
-          </div>
-          <div class="update-content">
-            <div class="update-date">January 1, 2026</div>
-            <h3>Happy New Year from The Antigle!</h3>
-            <p>Wishing all our gamers a fantastic new year filled with epic wins, new high scores, and unforgettable gaming moments!</p>
-            <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;" onclick="showFullPost(event, 'newyear')">Read More</a>
-          </div>
-        </article>
-      </div>
-      
-      <!-- Pagination -->
-      <div style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 3rem;">
-        <button class="btn btn-secondary" style="padding: 0.5rem 1rem;" disabled>Previous</button>
-        <button class="btn btn-primary" style="padding: 0.5rem 1rem;">1</button>
-        <button class="btn btn-secondary" style="padding: 0.5rem 1rem;">2</button>
-        <button class="btn btn-secondary" style="padding: 0.5rem 1rem;">3</button>
-        <button class="btn btn-secondary" style="padding: 0.5rem 1rem;">Next</button>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== FOOTER ==================== -->
+    <!-- Manual updates -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Updates &amp; Posts</h2>
+        </div>
+        <div class="cards-grid" id="updates-list">
+          <div class="loading-spinner" style="grid-column:1/-1"><div class="spinner"></div></div>
+        </div>
+        <div id="updates-pagination"></div>
+      </div>
+    </section>
+
+  </main>
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <!-- Brand -->
         <div class="footer-brand">
-          <img src="assets/images/logo.png" alt="The Antigle Logo">
-          <p>Your destination for gaming guides, tutorials, and resources. Created by Mukund from Not Gaming Playz.</p>
-          <div class="footer-social">
-            <a href="https://youtube.com/@notgamingplayz" target="_blank" aria-label="YouTube">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-              </svg>
-            </a>
-            <a href="mailto:jhamukund215@gmail.com" aria-label="Email">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-            </a>
-          </div>
+          <img src="./assets/images/youtube_avatar.png" alt="" class="footer-avatar">
+          <div class="footer-info"><h3>The Antigle</h3><p>Created by Mukund</p></div>
         </div>
-        
-        <!-- Quick Links -->
         <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="videos.html">Videos</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="updates.html">Updates</a></li>
-          </ul>
+          <a href="mailto:jhamukund215@gmail.com" class="footer-link">Contact</a>
+          <a href="https://youtube.com/@notgamingplayz" target="_blank" rel="noopener noreferrer" class="footer-link">YouTube</a>
         </div>
-        
-        <!-- Categories -->
-        <div class="footer-links">
-          <h4>Categories</h4>
-          <ul>
-            <li><a href="videos.html">Minecraft</a></li>
-            <li><a href="videos.html">Tutorials</a></li>
-            <li><a href="videos.html">Tips & Tricks</a></li>
-            <li><a href="resources.html">Downloads</a></li>
-          </ul>
-        </div>
-        
-        <!-- Contact -->
-        <div class="footer-links">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="mailto:jhamukund215@gmail.com">Email</a></li>
-            <li><a href="https://youtube.com/@notgamingplayz" target="_blank">YouTube</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; <span class="current-year"></span> The Antigle. Created by Mukund. All rights reserved.</p>
+        <div class="footer-copyright"><p>&copy; 2025 The Antigle. All rights reserved.</p></div>
       </div>
     </div>
   </footer>
-
-  <!-- Full Post Modal -->
-  <div id="post-modal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.9); z-index: 9999; overflow-y: auto;">
-    <div class="container" style="padding: 6rem 1.5rem 3rem;">
-      <div class="glass-card" style="max-width: 800px; margin: 0 auto; position: relative;">
-        <button onclick="closePostModal()" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer;">&times;</button>
-        <div id="post-content">
-          <!-- Content will be loaded dynamically -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
-  <script>
-    const posts = {
-      'launch': {
-        title: 'The Antigle Website is Now Live!',
-        date: 'January 28, 2026',
-        content: `
-          <p>We're incredibly excited to announce the official launch of The Antigle website! This marks a significant milestone in our journey to create the ultimate destination for gaming content, resources, and community.</p>
-          <h3>What is The Antigle?</h3>
-          <p>The Antigle is a gaming content platform created by Mukund, the creator behind the Not Gaming Playz YouTube channel. Our mission is to provide high-quality gaming guides, tutorials, and resources that help gamers of all skill levels improve their gameplay.</p>
-          <h3>What You\'ll Find Here</h3>
-          <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Videos:</strong> Browse our collection of gaming tutorials, guides, and gameplay videos</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Resources:</strong> Download free gaming tools, mods, texture packs, and study materials</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Updates:</strong> Stay informed about new content, announcements, and community news</li>
-            <li style="margin-bottom: 0.5rem;"><strong>About:</strong> Learn more about our mission and connect with us</li>
-          </ul>
-          <h3>Features We\'re Proud Of</h3>
-          <p>Our website includes a modern dark theme with light mode option, responsive design for all devices, and a clean, intuitive interface. We\'ve focused on creating a smooth user experience that makes finding and accessing content easy.</p>
-          <h3>What\'s Next?</h3>
-          <p>This is just the beginning! We have exciting plans for the future, including more video content, additional resources, and community features. Stay tuned for regular updates.</p>
-          <p>Thank you for being part of our journey. We can\'t wait to grow together!</p>
-        `
-      },
-      'minecraft-series': {
-        title: 'New Minecraft Tutorial Series Announced',
-        date: 'January 25, 2026',
-        content: `
-          <p>Get ready, Minecraft enthusiasts! We\'re launching a comprehensive new tutorial series that will take you from beginner to expert level.</p>
-          <h3>What to Expect</h3>
-          <p>This series will cover everything you need to know about Minecraft, including:</p>
-          <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
-            <li style="margin-bottom: 0.5rem;">Basic survival mechanics and early game strategies</li>
-            <li style="margin-bottom: 0.5rem;">Advanced building techniques and architectural tips</li>
-            <li style="margin-bottom: 0.5rem;">Redstone mechanics from simple circuits to complex contraptions</li>
-            <li style="margin-bottom: 0.5rem;">Farming and automation systems</li>
-            <li style="margin-bottom: 0.5rem;">Exploration and combat strategies</li>
-          </ul>
-          <h3>Release Schedule</h3>
-          <p>New episodes will be released every week on our YouTube channel. Make sure to subscribe and turn on notifications so you don\'t miss any content!</p>
-        `
-      },
-      'resources': {
-        title: 'Free Resources Section Now Available',
-        date: 'January 20, 2026',
-        content: `
-          <p>We\'re thrilled to announce that our Resources section is now live! This is where you\'ll find a growing collection of free gaming-related downloads.</p>
-          <h3>Available Resources</h3>
-          <p>Our initial collection includes:</p>
-          <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
-            <li style="margin-bottom: 0.5rem;">Minecraft texture packs and mods</li>
-            <li style="margin-bottom: 0.5rem;">Gaming optimization tools</li>
-            <li style="margin-bottom: 0.5rem;">Strategy guides and eBooks</li>
-            <li style="margin-bottom: 0.5rem;">Study materials for aspiring game developers</li>
-          </ul>
-          <h3>How to Access</h3>
-          <p>Simply navigate to the Resources page and browse our categories. All resources are free to download with no registration required!</p>
-        `
-      },
-      'milestone': {
-        title: 'Community Growth Milestone',
-        date: 'January 15, 2026',
-        content: `
-          <p>We\'ve hit a major milestone, and it\'s all thanks to you! Our community has grown beyond our expectations, and we\'re incredibly grateful for your support.</p>
-          <h3>A Big Thank You</h3>
-          <p>Every view, like, comment, and share means the world to us. Your engagement motivates us to create better content and improve our platform continuously.</p>
-          <h3>What This Means</h3>
-          <p>With this growth comes more opportunities to:</p>
-          <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
-            <li style="margin-bottom: 0.5rem;">Create more diverse and high-quality content</li>
-            <li style="margin-bottom: 0.5rem;">Develop new features for the website</li>
-            <li style="margin-bottom: 0.5rem;">Build a stronger gaming community</li>
-            <li style="margin-bottom: 0.5rem;">Collaborate with other creators</li>
-          </ul>
-          <p>Here\'s to many more milestones together!</p>
-        `
-      },
-      'features': {
-        title: 'Website Features Overview',
-        date: 'January 10, 2026',
-        content: `
-          <p>We\'ve built The Antigle website with a focus on user experience and modern design. Here\'s a complete overview of the features available:</p>
-          <h3>Dark & Light Mode</h3>
-          <p>Toggle between dark and light themes using the sun/moon icon in the navigation bar. Your preference is saved for future visits.</p>
-          <h3>Responsive Design</h3>
-          <p>The website is fully responsive and works seamlessly on desktop, tablet, and mobile devices.</p>
-          <h3>Content Filtering</h3>
-          <p>Both the Videos and Resources pages feature category filtering to help you find exactly what you\'re looking for.</p>
-          <h3>Smooth Animations</h3>
-          <p>Enjoy smooth transitions and hover effects throughout the site for a polished experience.</p>
-        `
-      },
-      'tips': {
-        title: 'Top Gaming Tips of the Month',
-        date: 'January 5, 2026',
-        content: `
-          <p>We asked our community for their best gaming tips, and the response was overwhelming! Here are some of the top tips shared by fellow gamers:</p>
-          <h3>Performance Optimization</h3>
-          <p>"Close background applications before gaming to free up RAM and CPU resources." - @GamerPro123</p>
-          <h3>Practice Makes Perfect</h3>
-          <p>"Spend 15 minutes in practice mode before ranked matches. It warms up your reflexes." - @SpeedRunner</p>
-          <h3>Take Breaks</h3>
-          <p>"Don\'t forget to take breaks every hour. Your performance drops significantly after long sessions." - @HealthyGamer</p>
-          <h3>Learn from Others</h3>
-          <p>"Watch professional players and try to understand their decision-making process." - @StrategyMaster</p>
-        `
-      },
-      'newyear': {
-        title: 'Happy New Year from The Antigle!',
-        date: 'January 1, 2026',
-        content: `
-          <p>Happy New Year to all our amazing gamers! As we step into 2026, we want to take a moment to reflect on the past year and look forward to what\'s coming.</p>
-          <h3>Looking Back</h3>
-          <p>2025 was an incredible year for us. We created countless videos, built this website from scratch, and most importantly, connected with an amazing community of gamers.</p>
-          <h3>Looking Forward</h3>
-          <p>In 2026, we promise to:</p>
-          <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
-            <li style="margin-bottom: 0.5rem;">Create even more helpful gaming content</li>
-            <li style="margin-bottom: 0.5rem;">Expand our resource library</li>
-            <li style="margin-bottom: 0.5rem;">Improve the website based on your feedback</li>
-            <li style="margin-bottom: 0.5rem;">Build a stronger community</li>
-          </ul>
-          <p>May your 2026 be filled with epic wins, new high scores, and unforgettable gaming moments!</p>
-        `
-      }
-    };
-    
-    function showFullPost(event, postId) {
-      event.preventDefault();
-      const post = posts[postId];
-      if (post) {
-        document.getElementById('post-content').innerHTML = `
-          <div class="update-date" style="margin-bottom: 1rem;">${post.date}</div>
-          <h2 style="margin-bottom: 1.5rem;">${post.title}</h2>
-          <div style="color: var(--text-secondary); line-height: 1.8;">
-            ${post.content}
-          </div>
-        `;
-        document.getElementById('post-modal').style.display = 'block';
-        document.body.style.overflow = 'hidden';
-      }
-    }
-    
-    function closePostModal() {
-      document.getElementById('post-modal').style.display = 'none';
-      document.body.style.overflow = '';
-    }
-    
-    // Close modal on background click
-    document.getElementById('post-modal').addEventListener('click', function(e) {
-      if (e.target === this) {
-        closePostModal();
-      }
-    });
-    
-    // Close modal on Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closePostModal();
-      }
-    });
-  </script>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
