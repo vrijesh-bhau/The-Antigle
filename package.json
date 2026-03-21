@@ -1,0 +1,13 @@
+{
+  "name": "the-antigle",
+  "version": "1.0.0",
+  "description": "The Antigle - Gaming website by Mukund",
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-youtube.js"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.3.6",
+    "node-fetch": "^3.3.2"
+  }
+}
